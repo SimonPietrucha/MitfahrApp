@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822204978656",
+    "project_id": "mitfahrapp-f1f72",
+    "storage_bucket": "mitfahrapp-f1f72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822204978656:android:4b61406ebbfcf3d1858785",
+        "android_client_info": {
+          "package_name": "com.example.mitfahrapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822204978656-248b6fkankfjcfbmul0at9npk0brc1um.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjPYsD9jO-4GdM7sVnC8gbVYONY8prWUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822204978656-248b6fkankfjcfbmul0at9npk0brc1um.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
