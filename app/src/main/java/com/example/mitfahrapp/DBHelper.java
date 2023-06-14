@@ -1,4 +1,4 @@
-package com.learnandroid.loginsqlite;
+package com.example.mitfahrapp;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
