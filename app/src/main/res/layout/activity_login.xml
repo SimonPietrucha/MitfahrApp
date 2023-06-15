@@ -47,7 +47,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textSize="18sp"
@@ -70,7 +70,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/repassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textSize="18sp"
