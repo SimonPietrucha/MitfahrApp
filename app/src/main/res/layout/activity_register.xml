@@ -153,7 +153,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnsignin1"
+                android:id="@+id/btnsignin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_background"

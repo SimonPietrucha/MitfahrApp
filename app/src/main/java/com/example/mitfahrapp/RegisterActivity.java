@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
