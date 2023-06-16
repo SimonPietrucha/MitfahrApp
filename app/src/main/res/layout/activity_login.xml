@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Username"
@@ -60,7 +60,7 @@
             android:hint="Username eingeben" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Passwort"

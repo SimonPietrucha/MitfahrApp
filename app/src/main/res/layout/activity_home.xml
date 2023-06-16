@@ -22,7 +22,6 @@
 
         <Button
             android:id="@+id/btnsignin2"
-            tools:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -54,7 +53,7 @@
                 android:text="Oder" />
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/view5"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
