@@ -13,6 +13,7 @@ public class HomeActivity extends AppCompatActivity {
     Button signup, signin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
