@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Boolean insert = DB.insertData(user, pass);
                             if(insert==true){
                                 Toast.makeText(RegisterActivity.this, "Registrierung erfolgreich", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
+                                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
                             }else{
                                 Toast.makeText(RegisterActivity.this, "Registrierung fehlgeschlagen", Toast.LENGTH_SHORT).show();
