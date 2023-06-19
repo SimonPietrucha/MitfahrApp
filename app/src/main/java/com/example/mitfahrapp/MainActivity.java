@@ -1,8 +1,10 @@
 package com.example.mitfahrapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -18,6 +20,7 @@ import com.example.mitfahrapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button profile;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        profile = (Button) findViewById(R.id.profile);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -48,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -64,4 +76,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
