@@ -10,14 +10,19 @@ import android.widget.Toast;
 
 import com.example.mitfahrapp.ui.home.HomeFragment;
 
+import java.util.UUID;
+
 public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Button btnlogin, signup;
     DBHelper DB;
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sessionManager = new SessionManager(getApplicationContext());
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password1);
@@ -31,13 +36,14 @@ public class LoginActivity extends AppCompatActivity {
 
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
-
                 if(user.equals("")||pass.equals(""))
                     Toast.makeText(LoginActivity.this, "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkuserpass = DB.checkusernamepassword(user, pass);
                     if(checkuserpass==true){
                         Toast.makeText(LoginActivity.this, "Erfolgreich eingeloggt", Toast.LENGTH_SHORT).show();
+                        sessionManager.setUsername(user);
+                        sessionManager.setLoggedIn(true);
                         Intent intent  = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                     }else{
@@ -46,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
