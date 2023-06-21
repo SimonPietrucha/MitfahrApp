@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="Ort/ Postleitzahl"
-            android:textSize="24sp" />
+            android:hint="Ort/ Postleitzahl"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -67,8 +67,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="32dp"
-            android:text="Ort/ Postleitzahl"
-            android:textSize="24sp" />
+            android:hint="Ort/ Postleitzahl"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button3"
