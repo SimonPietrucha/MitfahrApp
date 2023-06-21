@@ -14,8 +14,7 @@
         android:textStyle="bold"
         android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewStart"
@@ -24,8 +23,7 @@
         android:textSize="16sp"
         android:textColor="#333333"
         app:layout_constraintTop_toBottomOf="@id/textViewUsername"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewZiel"
@@ -35,21 +33,20 @@
         android:textColor="#333333"
         android:layout_marginBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/textViewStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonBuchen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
         android:background="@drawable/button_background"
         android:text="Buchen"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="@id/textViewZiel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewZiel"
-        app:layout_constraintTop_toTopOf="@id/textViewZiel"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="@id/textViewZiel" />
 
     <View
         android:id="@+id/view4"
