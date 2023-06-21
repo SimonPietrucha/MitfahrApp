@@ -20,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
         @Override
         public void onCreate(SQLiteDatabase MyDB) {
             MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
-            MyDB.execSQL("create Table mitfahrgelegenheit(username TEXT primary key, password TEXT)");
+            MyDB.execSQL("create Table mitfahrgelegenheit(ID INT primary key, username TEXT, start TEXT, ziel TEXT )");
         }
 
 
@@ -57,6 +57,21 @@ public class DBHelper extends SQLiteOpenHelper {
             else
                 return false;
         }
+    public boolean updateStartAndZiel(String username, String start, String ziel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("username", username);
+        contentValues.put("start", start);
+        contentValues.put("ziel", ziel);
+
+        // Aktualisiere die Zeile in deiner Tabelle mit den neuen Werten für "start" und "ziel"
+        int rowsAffected = db.update("mitfahrgelegenheit", contentValues, null, null);
+        db.close();
+
+        // Überprüfe, ob die Aktualisierung erfolgreich war
+        return rowsAffected > 0;
+    }
+
 
 
 

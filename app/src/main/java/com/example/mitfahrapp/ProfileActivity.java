@@ -13,7 +13,6 @@ public class ProfileActivity extends AppCompatActivity {
     TextView textViewUsername;
     Button button;
     DBHelper DB;
-
     SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
