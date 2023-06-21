@@ -21,8 +21,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         @Override
         public void onCreate(SQLiteDatabase MyDB) {
-            MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
-            MyDB.execSQL("create Table mitfahrgelegenheit(ID INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, start TEXT, ziel TEXT )");
+            MyDB.execSQL("create Table users(ID INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)");
+            MyDB.execSQL("create Table mitfahrgelegenheit(ID INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, start TEXT, ziel TEXT, mitfahrer TEXT)");
         }
 
 
