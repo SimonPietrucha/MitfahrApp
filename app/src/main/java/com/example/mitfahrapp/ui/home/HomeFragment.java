@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 if(start.equals("") || ziel.equals("")) {
                     Toast.makeText(getActivity(), "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
                 } else {
-                    boolean updatesuccess = DB.updateStartAndZiel(username, start, ziel);
+                    boolean updatesuccess = DB.insertMitfahrgelegenheit(username, start, ziel);
                     if(updatesuccess){
                         Toast.makeText(getActivity(), "Mitfahrgegenheit erstellt", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getActivity(), MainActivity.class);
