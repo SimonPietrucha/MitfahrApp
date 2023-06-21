@@ -38,7 +38,7 @@
         android:id="@+id/buttonBuchen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/button_background"
         android:text="Buchen"
         android:textColor="#ffffff"
