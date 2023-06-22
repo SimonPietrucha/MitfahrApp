@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewUsername"
+        android:id="@+id/textViewUsername1"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewStart"
+        android:id="@+id/textViewStart1"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewZiel"
+        android:id="@+id/textViewZiel1"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textColor="#333333"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="@id/textViewStart" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/view5"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="32dp"
