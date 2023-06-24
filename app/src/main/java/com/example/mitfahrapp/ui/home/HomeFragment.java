@@ -54,11 +54,11 @@ public class HomeFragment extends Fragment {
                 } else {
                     boolean updatesuccess = DB.insertMitfahrgelegenheit(username, start, ziel);
                     if(updatesuccess){
-                        Toast.makeText(getActivity(), "Mitfahrgegenheit erstellt", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Mitfahrgelegenheit erstellt", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getActivity(), MainActivity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(getActivity(), "Fehler beim Aktualisieren von Start und Ziel", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Mitfahrgelegenheit konnte nicht erstellt werden", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

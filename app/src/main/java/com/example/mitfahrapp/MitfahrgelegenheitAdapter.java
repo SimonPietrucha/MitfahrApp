@@ -1,10 +1,9 @@
 package com.example.mitfahrapp;
-
 import android.content.Context;
-import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,10 +14,16 @@ import java.util.List;
 public class MitfahrgelegenheitAdapter extends RecyclerView.Adapter<MitfahrgelegenheitAdapter.ViewHolder> {
     private Context context;
     private List<Mitfahrgelegenheit> mitfahrgelegenheitList;
+    private OnAddPassengerClickListener listener;
 
-    public MitfahrgelegenheitAdapter(Context context, List<Mitfahrgelegenheit> mitfahrgelegenheitList) {
+    public interface OnAddPassengerClickListener {
+        void onAddPassengerClick(int mitfahrgelegenheitId);
+    }
+
+    public MitfahrgelegenheitAdapter(Context context, List<Mitfahrgelegenheit> mitfahrgelegenheitList, OnAddPassengerClickListener listener) {
         this.context = context;
         this.mitfahrgelegenheitList = mitfahrgelegenheitList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -34,6 +39,7 @@ public class MitfahrgelegenheitAdapter extends RecyclerView.Adapter<Mitfahrgeleg
         holder.textViewUsername.setText(mitfahrgelegenheit.getUsername());
         holder.textViewStart.setText(mitfahrgelegenheit.getStart());
         holder.textViewZiel.setText(mitfahrgelegenheit.getZiel());
+        holder.buttonBuchen.setTag(mitfahrgelegenheit.getId());
     }
 
     @Override
@@ -43,12 +49,24 @@ public class MitfahrgelegenheitAdapter extends RecyclerView.Adapter<Mitfahrgeleg
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewUsername, textViewStart, textViewZiel;
+        public Button buttonBuchen;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewUsername = itemView.findViewById(R.id.textViewUsername);
             textViewStart = itemView.findViewById(R.id.textViewStart);
             textViewZiel = itemView.findViewById(R.id.textViewZiel);
+            buttonBuchen = itemView.findViewById(R.id.buttonBuchen);
+
+            buttonBuchen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION && listener != null) {
+                        listener.onAddPassengerClick((int) buttonBuchen.getTag());
+                    }
+                }
+            });
         }
     }
 }

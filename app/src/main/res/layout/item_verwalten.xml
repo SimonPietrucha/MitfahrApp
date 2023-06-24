@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewUsername1"
+        android:id="@+id/textViewUsername"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewStart1"
+        android:id="@+id/textViewStart"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -26,26 +26,34 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewZiel1"
+        android:id="@+id/textViewZiel"
         android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:textColor="#333333"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewStart" />
+    <TextView
+        android:id="@+id/textViewMitfahrer"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        app:layout_constraintTop_toBottomOf="@id/textViewZiel"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonAbbrechen"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:id="@+id/buttonDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:background="@drawable/cancel"
         android:backgroundTint="#BC0606"
+        android:text=" "
         app:layout_constraintBottom_toBottomOf="@id/textViewZiel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewZiel"
         app:layout_constraintTop_toTopOf="@id/textViewStart" />
-
     <View
         android:id="@+id/view5"
         android:layout_width="wrap_content"

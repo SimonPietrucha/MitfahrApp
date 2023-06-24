@@ -5,12 +5,14 @@ public class Mitfahrgelegenheit {
     private String username;
     private String start;
     private String ziel;
+    private String mitfahrer;
 
-    public Mitfahrgelegenheit(int id, String username, String start, String ziel) {
+    public Mitfahrgelegenheit(int id, String username, String start, String ziel, String mitfahrer) {
         this.id = id;
         this.username = username;
         this.start = start;
         this.ziel = ziel;
+        this.mitfahrer = mitfahrer;
     }
 
     public int getId() {
@@ -27,5 +29,9 @@ public class Mitfahrgelegenheit {
 
     public String getZiel() {
         return ziel;
+    }
+
+    public String getMitfahrer() {
+        return mitfahrer;
     }
 }

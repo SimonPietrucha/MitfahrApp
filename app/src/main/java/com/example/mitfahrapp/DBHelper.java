@@ -1,4 +1,6 @@
 package com.example.mitfahrapp;
+import static android.app.DownloadManager.COLUMN_ID;
+
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
@@ -78,10 +80,40 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         return MyDB.query("mitfahrgelegenheit", null, null, null, null, null, null);
     }
+    public boolean addMitfahrer(int mitfahrgelegenheitId, String user) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("mitfahrer", user);
 
+        int rowsAffected = db.update("mitfahrgelegenheit", values, "ID = ?", new String[]{String.valueOf(mitfahrgelegenheitId)});
 
+        db.close();
 
-
-
-
+        return rowsAffected > 0;
     }
+    public boolean deleteMitfahrgelegenheit(int mitfahrgelegenheitId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete("mitfahrgelegenheit", "ID = ?", new String[]{String.valueOf(mitfahrgelegenheitId)}) > 0;
+    }
+    public Cursor getMitfahrgelegenheitenByUsername(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = {
+                "ID",
+                "username",
+                "start",
+                "ziel",
+                "mitfahrer"
+        };
+        String selection = "username = ?";
+        String[] selectionArgs = {username};
+
+        return db.query("mitfahrgelegenheit", projection, selection, selectionArgs, null, null, null);
+    }
+
+}
+
+
+
+
+
+

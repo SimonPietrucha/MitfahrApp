@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 public class ProfileActivity extends AppCompatActivity {
     TextView textViewUsername;
-    Button button;
+    Button button, ausloggbutton;
     DBHelper DB;
     SessionManager sessionManager;
     @Override
@@ -20,6 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         sessionManager = new SessionManager(getApplicationContext());
         button = (Button) findViewById(R.id.button2);
+        ausloggbutton = (Button) findViewById(R.id.buttonLogout);
         textViewUsername = (TextView) findViewById(R.id.textView6);
 
         DB = new DBHelper(this);
@@ -32,6 +33,15 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ausloggbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sessionManager.logout();
+                Toast.makeText(ProfileActivity.this, "Ausgeloggt!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
                 startActivity(intent);
             }
         });

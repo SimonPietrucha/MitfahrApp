@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.mitfahrapp.ui.slideshow.SlideshowVerwalten"
+        android:name="com.example.mitfahrapp.ui.slideshow.VerwaltenFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_verwalten" />
 </navigation>
