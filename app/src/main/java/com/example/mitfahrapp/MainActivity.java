@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Snackbar.make(view, "Replace with your own action" , Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Klicke hier um eine Nachricht zu schreiben" , Snackbar.LENGTH_LONG)
+                        .setAction("Message", null).show();
             }
         });
 

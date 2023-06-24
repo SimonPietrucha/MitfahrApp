@@ -1,4 +1,4 @@
-package com.example.mitfahrapp.ui.slideshow;
+package com.example.mitfahrapp.ui.Verwalten;
 
 import android.database.Cursor;
 import android.os.Bundle;
